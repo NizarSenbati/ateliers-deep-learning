@@ -56,3 +56,61 @@ The main goal of this lab was to master building various neural architectures fo
 * **Environment:** Kaggle (GPU Accelerated)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Lab 3: NLP with Sequence Models & Transformers
+
+## Objective
+The objective of this lab was to apply Deep Learning techniques to Natural Language Processing (NLP). This involved collecting Arabic text data, preprocessing it, building Recurrent Neural Networks (RNN, LSTM, GRU) for scoring relevance, and exploring Transformers (GPT-2) for text generation.
+
+## Work Summary
+
+### Part 1: Classification/Regression with RNNs
+* **Data Collection:** Created a dataset of Arabic text with associated "relevance scores" (0-10).
+* **Preprocessing:** Implemented an NLP pipeline using `NLTK`, including Tokenization, Stop-Word removal, and Stemming (ISRI Stemmer) to prepare Arabic text for modeling.
+* **Modeling:** Built a flexible PyTorch `SequenceRegressor` class capable of instantiating:
+    * **Simple RNN:** Basic recurrent units.
+    * **Bidirectional RNN:** Processing sequence in both directions to capture context better.
+    * **GRU (Gated Recurrent Unit):** Efficient gating to handle long-term dependencies.
+    * **LSTM (Long Short-Term Memory):** Robust handling of vanishing gradients.
+* **Comparison:** Trained all four models and compared their MSE Loss. LSTM and GRU generally outperformed the simple RNN in stability and final error.
+
+### Part 2: Transformers (GPT-2)
+* **Architecture:** Utilized the `GPT-2` architecture via the Hugging Face `transformers` library.
+* **Fine-Tuning:** Prepared a text dataset and fine-tuned the pre-trained Language Model (LM) to adapt to the specific domain data.
+* **Generation:** Used the fine-tuned model to generate new paragraphs based on input prompts, demonstrating the capabilities of Attention-based mechanisms over traditional RNNs.
+
+## Tools Used
+* **Language:** Python
+* **Libraries:** PyTorch, NLTK, Transformers (Hugging Face), BeautifulSoup, Pandas
+* **Environment:** Kaggle (GPU Accelerated)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Lab 3: NLP with Sequence Models & Transformers
+
+## Objective
+The objective of this lab was to apply Deep Learning techniques to Natural Language Processing (NLP). This involved collecting Arabic text data, preprocessing it, building Recurrent Neural Networks (RNN, LSTM, GRU) for scoring relevance, and exploring Transformers (GPT-2) for text generation.
+
+## Work Summary
+
+### Part 1: Classification/Regression with RNNs
+* **Data Collection:** Created a dataset of Arabic text with associated "relevance scores" (0-10).
+* **Preprocessing:** Implemented an NLP pipeline using `NLTK`, including Tokenization, Stop-Word removal, and Stemming (ISRI Stemmer) to prepare Arabic text for modeling.
+* **Modeling:** Built a flexible PyTorch `SequenceRegressor` class capable of instantiating:
+    * **Simple RNN:** Basic recurrent units.
+    * **Bidirectional RNN:** Processing sequence in both directions to capture context better.
+    * **GRU (Gated Recurrent Unit):** Efficient gating to handle long-term dependencies.
+    * **LSTM (Long Short-Term Memory):** Robust handling of vanishing gradients.
+* **Comparison:** Trained all four models and compared their MSE Loss. LSTM and GRU generally outperformed the simple RNN in stability and final error.
+
+### Part 2: Transformers (GPT-2)
+* **Architecture:** Utilized the `GPT-2` architecture via the Hugging Face `transformers` library.
+* **Fine-Tuning:** Prepared a text dataset and fine-tuned the pre-trained Language Model (LM) to adapt to the specific domain data.
+* **Generation:** Used the fine-tuned model to generate new paragraphs based on input prompts, demonstrating the capabilities of Attention-based mechanisms over traditional RNNs.
+
+## Tools Used
+* **Language:** Python
+* **Libraries:** PyTorch, NLTK, Transformers (Hugging Face), BeautifulSoup, Pandas
+* **Environment:** Kaggle (GPU Accelerated)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
