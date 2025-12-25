@@ -114,3 +114,29 @@ The objective of this lab was to apply Deep Learning techniques to Natural Langu
 * **Environment:** Kaggle (GPU Accelerated)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Lab 4: Generative Deep Learning (AE, VAE, GAN)
+
+## Objective
+The objective of this lab was to explore Generative AI models. We focused on learning compact representations of data using Autoencoders (AE) and Variational Autoencoders (VAE), and generating new synthetic data using Generative Adversarial Networks (GANs).
+
+## Work Summary
+
+### Part 1: Autoencoders (AE & VAE)
+* **Autoencoder (AE):** Built a symmetric encoder-decoder architecture. The model successfully compressed MNIST images into a 2D latent space and reconstructed them. The latent space visualization showed a "scattered" distribution, making it poor for generation.
+* **Variational Autoencoder (VAE):** Improved upon the AE by introducing a probabilistic latent space (Gaussian). We used the **Reparameterization Trick** and minimized the **KL Divergence** alongside reconstruction loss.
+* **Conclusion:** The VAE produced a smoother, more continuous latent space compared to the AE, allowing for better random sampling and generation of new digits.
+
+### Part 2: Generative Adversarial Networks (GANs)
+* **Task:** Generate abstract art using the "Abstract Art Gallery" dataset.
+* **Architecture:**
+    * **Generator:** Used Transposed Convolutions (Upsampling) to transform a random noise vector ($z$) into a 64x64 RGB image.
+    * **Discriminator:** Used standard Convolutions to classify images as "Real" (from dataset) or "Fake" (from Generator).
+* **Training:** Trained the two networks in a zero-sum game (Min-Max).
+* **Results:** The Generator learned to produce colorful, abstract-like patterns that mimicked the style of the training dataset, though perfect realism requires significantly longer training times.
+
+## Tools Used
+* **Language:** Python
+* **Libraries:** PyTorch, Torchvision, Matplotlib
+* **Techniques:** Reparameterization Trick, KL Divergence, Adversarial Training.
+
+
