@@ -27,3 +27,32 @@ The main purpose of this lab was to get familiar with the PyTorch library by est
 * **Environment:** Kaggle Notebooks
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Lab 2: Computer Vision with PyTorch (CNN, Faster R-CNN, ViT)
+
+## Objective
+The main goal of this lab was to master building various neural architectures for Computer Vision using PyTorch. [cite_start]This included establishing CNNs from scratch, adapting Object Detection models (Faster R-CNN), applying Transfer Learning (VGG16), and building Vision Transformers (ViT) from scratch. [cite: 67]
+
+## Work Summary
+
+### Part 1: CNN & Object Detection
+* [cite_start]**CNN Classifier:** Built a custom Convolutional Neural Network (CNN) with 2 convolutional layers, MaxPooling, and Batch Normalization. achieved high accuracy (~99%) on the MNIST dataset efficiently. [cite: 71]
+* **Faster R-CNN:** Adapted the `Faster R-CNN` object detection model to classify MNIST digits by treating the entire image as a bounding box. [cite_start]This demonstrated how to adapt detection architectures for classification, though it was computationally heavier than a simple CNN. [cite: 72]
+* **Transfer Learning (VGG16):** Utilized a pre-trained VGG16 model. Since VGG16 expects 3-channel RGB images of size 224x224, the MNIST data was resized and normalized. [cite_start]Fine-tuning the final layer resulted in high accuracy but required significantly more training time due to the larger input size. [cite: 73]
+
+### Part 2: Vision Transformer (ViT)
+* [cite_start]**ViT Implementation:** Implemented a Vision Transformer from scratch based on the "Attention is All You Need" and "ViT" papers. [cite: 75, 77]
+* **Architecture:** Created custom classes for `PatchEmbedding`, `MultiHeadAttention`, and `TransformerBlock`. The model splits images into fixed-size patches, linearly embeds them, adds position embeddings, and feeds them into a Transformer encoder.
+* [cite_start]**Results:** The ViT model successfully classified MNIST digits, demonstrating that pure attention-based mechanisms can replace traditional CNNs for image classification tasks. [cite: 78]
+
+## Synthesis & Conclusion
+* **Standard CNNs** remain the most efficient choice for simple tasks like MNIST (fast training, high accuracy).
+* **Faster R-CNN** is powerful for detection but is overkill for simple classification.
+* **Transfer Learning** is excellent when data is scarce, but the input requirements (image size) can slow down training for small image datasets like MNIST.
+* **Vision Transformers** offer a modern alternative to CNNs, capturing global context through self-attention, though they often require more data or regularization to outperform CNNs on small datasets.
+
+## Tools Used
+* **Language:** Python
+* **Libraries:** PyTorch, Torchvision, NumPy, Matplotlib
+* **Environment:** Kaggle (GPU Accelerated)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
